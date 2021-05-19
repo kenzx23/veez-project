@@ -24,25 +24,25 @@ def report_setting(bot: Bot, update: Update, args: List[str]):
         if len(args) >= 1:
             if args[0] in ("yes", "on"):
                 sql.set_user_setting(chat.id, True)
-                msg.reply_text("Turned on reporting! You'll be notified whenever anyone reports something.")
+                msg.reply_text("Pelaporan diaktifkan!, Anda akan diberi tahu setiap kali ada yang melaporkan sesuatu di dalam grup.")
 
             elif args[0] in ("no", "off"):
                 sql.set_user_setting(chat.id, False)
-                msg.reply_text("Turned off reporting! You wont get any reports.")
+                msg.reply_text("Pelaporan dinonaktifkan, Anda tidak akan menerima laporan lagi dari grup.")
         else:
-            msg.reply_text("Your current report preference is: `{}`".format(sql.user_should_report(chat.id)),
+            msg.reply_text("Preferensi laporan anda saat ini adalah: `{}`".format(sql.user_should_report(chat.id)),
                            parse_mode=ParseMode.MARKDOWN)
 
     else:
         if len(args) >= 1:
             if args[0] in ("yes", "on"):
                 sql.set_chat_setting(chat.id, True)
-                msg.reply_text("Turned on reporting! Admins who have turned on reports will be notified when /report "
-                               "or @admin are called.")
+                msg.reply_text("Pelaporan diaktifkan!, Admin yang mengaktifkan pelaporan akan di beritahu jika ada anggota yang mengatakan /report "
+                               "atau dipanggil dengan tag @admin.")
 
             elif args[0] in ("no", "off"):
                 sql.set_chat_setting(chat.id, False)
-                msg.reply_text("Turned off reporting! No admins will be notified on /report or @admin.")
+                msg.reply_text("Pelaporan dinonaktifkan!, admin tidak akan lagi diberitahu jika ada yang mengatakan /report atau @admin.")
         else:
             msg.reply_text("This chat's current setting is: `{}`".format(sql.chat_should_report(chat.id)),
                            parse_mode=ParseMode.MARKDOWN)
@@ -111,26 +111,26 @@ def __migrate__(old_chat_id, new_chat_id):
 
 
 def __chat_settings__(chat_id, user_id):
-    return "This chat is setup to send user reports to admins, via /report and @admin: `{}`".format(
+    return "grup ini telah diatur untuk mengirimkan laporan ke admin, dengan cara mengetik /report dan @admin: `{}`".format(
         sql.chat_should_report(chat_id))
 
 
 def __user_settings__(user_id):
-    return "You receive reports from chats you're admin in: `{}`.\nToggle this with /reports in PM.".format(
+    return "Anda menerima laporan dari obrolan yang Anda kelola: `{}`.\nAlihkan ini dengan /reports di PM.".format(
         sql.user_should_report(user_id))
 
 
-__mod_name__ = "Reporting"
+__mod_name__ = "🚨Reporting"
 
 __help__ = """
- - /report <reason>: reply to a message to report it to admins.
- - @admin: reply to a message to report it to admins.
-NOTE: neither of these will get triggered if used by admins
+ - /report <alasan>: balas ke pesan si pelanggar untuk melaporkan ke admin.
+ - @admin: sama seperti report, gunakan untuk melaporkan pelanggaran ke admin.
+NOTE: tidak satu pun dari ini akan dipicu jika digunakan oleh admin.
 
-*Admin only:*
- - /reports <on/off>: change report setting, or view current status.
-   - If done in pm, toggles your status.
-   - If in chat, toggles that chat's status.
+*Admin Only:*
+ - /reports <on/off>: ubah pengaturan laporan, atau lihat status saat ini.
+   - Jika selesai di pm, matikan status Anda.
+   - Jika dalam obrolan, matikan status obrolan itu.
 """
 
 REPORT_HANDLER = CommandHandler("report", report, filters=Filters.group)
