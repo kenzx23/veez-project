@@ -21,10 +21,10 @@ def quickscope(bot: Bot, update: Update, args: List[int]):
         chat_id = str(args[1])
         to_kick = str(args[0])
     else:
-        update.effective_message.reply_text("You don't seem to be referring to a chat/user")
+        update.effective_message.reply_text("anda tampaknya tidak mengacu pada obrolan / pengguna")
     try:
         bot.kick_chat_member(chat_id, to_kick)
-        update.effective_message.reply_text("Attempted banning " + to_kick + " from" + chat_id)
+        update.effective_message.reply_text("attempted banning " + to_kick + " from" + chat_id)
     except BadRequest as excp:
         update.effective_message.reply_text(excp.message + " " + to_kick)
 
@@ -35,10 +35,10 @@ def quickunban(bot: Bot, update: Update, args: List[int]):
         chat_id = str(args[1])
         to_kick = str(args[0])
     else:
-        update.effective_message.reply_text("You don't seem to be referring to a chat/user")
+        update.effective_message.reply_text("anda tampaknya tidak mengacu pada obrolan / pengguna")
     try:
         bot.unban_chat_member(chat_id, to_kick)
-        update.effective_message.reply_text("Attempted unbanning " + to_kick + " from" + chat_id)
+        update.effective_message.reply_text("attempted unbanning " + to_kick + " from" + chat_id)
     except BadRequest as excp:
         update.effective_message.reply_text(excp.message + " " + to_kick)
 
@@ -67,14 +67,14 @@ def snipe(bot: Bot, update: Update, args: List[str]):
         chat_id = str(args[0])
         del args[0]
     except TypeError as excp:
-        update.effective_message.reply_text("Please give me a chat to echo to!")
+        update.effective_message.reply_text("please give me a chat to echo to!")
     to_send = " ".join(args)
     if len(to_send) >= 2:
         try:
             bot.sendMessage(int(chat_id), str(to_send))
         except TelegramError:
             LOGGER.warning("Couldn't send to group %s", str(chat_id))
-            update.effective_message.reply_text("Couldn't send the message. Perhaps I'm not part of that group?")
+            update.effective_message.reply_text("tidak dapat mengirim pesan, mungkin saya bukan bagian dari grup itu.")
 
 
 @run_async
@@ -83,14 +83,14 @@ def getlink(bot: Bot, update: Update, args: List[int]):
     if args:
         chat_id = int(args[0])
     else:
-        update.effective_message.reply_text("You don't seem to be referring to a chat")
+        update.effective_message.reply_text("anda sepertinya tidak mengacu pada obrolan.")
     chat = bot.getChat(chat_id)
     bot_member = chat.get_member(bot.id)
     if bot_member.can_invite_users:
         invitelink = bot.get_chat(chat_id).invite_link
         update.effective_message.reply_text(invitelink)
     else:
-        update.effective_message.reply_text("I don't have access to the invite link!")
+        update.effective_message.reply_text("saya tidak memiliki akses ke tautan undangan!")
 
 
 @bot_admin
@@ -99,7 +99,7 @@ def leavechat(bot: Bot, update: Update, args: List[int]):
         chat_id = int(args[0])
         bot.leaveChat(chat_id)
     else:
-        update.effective_message.reply_text("You don't seem to be referring to a chat")
+        update.effective_message.reply_text("anda sepertinya tidak mengacu pada obrolan.")
 
 __help__ = """
 **Owner only:**
@@ -117,7 +117,7 @@ __help__ = """
 - /gbanlist: get gbanned users list
 - /gmutelist: get gmuted users list
 - Chat bans via /restrict chat_id and /unrestrict chat_id commands
-**Support user:**
+**Support User:**
 - /Gban : Global ban a user
 - /Ungban : Ungban a user
 - /Gmute : Gmute a user
@@ -127,7 +127,7 @@ Sudo/owner can use these commands too.
 - /listsudo Gives a list of sudo users
 - /listsupport gives a list of support users
 """
-__mod_name__ = "Special"
+__mod_name__ = "✨Spesial"
 
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFilters.sudo_filter)
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
