@@ -25,30 +25,30 @@ def send_rules(update, chat_id, from_pm=False):
     try:
         chat = bot.get_chat(chat_id)
     except BadRequest as excp:
-        if excp.message == "Chat not found" and from_pm:
-            bot.send_message(user.id, "The rules shortcut for this chat hasn't been set properly! Ask admins to "
-                                      "fix this.")
+        if excp.message == "pesan tidak ditemukan!" and from_pm:
+            bot.send_message(user.id, "pintasan aturan untuk obrolan ini belum disetel dengan benar, minta admin untuk  "
+                                      "memperbaiki ini.")
             return
         else:
             raise
 
     rules = sql.get_rules(chat_id)
-    text = "The rules for *{}* are:\n\n{}".format(escape_markdown(chat.title), rules)
+    text = "peraturan untuk *{}* adalah:\n\n{}".format(escape_markdown(chat.title), rules)
 
     if from_pm and rules:
         bot.send_message(user.id, text, parse_mode=ParseMode.MARKDOWN)
     elif from_pm:
-        bot.send_message(user.id, "The group admins haven't set any rules for this chat yet. "
-                                  "This probably doesn't mean it's lawless though...!")
+        bot.send_message(user.id, "admin grup belum menetapkan aturan apa pun untuk obrolan ini. "
+                                  "ini mungkin tidak berarti itu melanggar hukum!")
     elif rules:
-        update.effective_message.reply_text("Contact me in PM to get this group's rules.",
+        update.effective_message.reply_text("hubungi saya di pm untuk melihat peraturan grup ini, tekan tombol dibawah!",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Rules",
+                                                [[InlineKeyboardButton(text="📝PERATURAN GRUP",
                                                                        url="t.me/{}?start={}".format(bot.username,
                                                                                                      chat_id))]]))
     else:
-        update.effective_message.reply_text("The group admins haven't set any rules for this chat yet. "
-                                            "This probably doesn't mean it's lawless though...!")
+        update.effective_message.reply_text("admin grup belum menetapkan aturan apa pun untuk obrolan ini. "
+                                            "ini mungkin tidak berarti itu melanggar hukum!")
 
 
 @run_async
@@ -64,7 +64,7 @@ def set_rules(bot: Bot, update: Update):
         markdown_rules = markdown_parser(txt, entities=msg.parse_entities(), offset=offset)
 
         sql.set_rules(chat_id, markdown_rules)
-        update.effective_message.reply_text("Successfully set rules for this group.")
+        update.effective_message.reply_text("berhasil mengatur peraturan di grup ini.")
 
 
 @run_async
@@ -72,7 +72,7 @@ def set_rules(bot: Bot, update: Update):
 def clear_rules(bot: Bot, update: Update):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
-    update.effective_message.reply_text("Successfully cleared rules!")
+    update.effective_message.reply_text("berhasil menghapus peraturan!")
 
 
 def __stats__():
@@ -90,18 +90,18 @@ def __migrate__(old_chat_id, new_chat_id):
 
 
 def __chat_settings__(chat_id, user_id):
-    return "This chat has had it's rules set: `{}`".format(bool(sql.get_rules(chat_id)))
+    return "obrolan ini telah menetapkan aturannya: `{}`".format(bool(sql.get_rules(chat_id)))
 
 
 __help__ = """
- - /rules: get the rules for this chat.
+ - /rules: dapatkan peraturan dalam suatu grup.
 
 *Admin only:*
- - /setrules <your rules here>: set the rules for this chat.
- - /clearrules: clear the rules for this chat.
+ - /setrules <peraturan anda>: pasang peraturan dalam suatu grup.
+ - /clearrules: menghapus peraturan di dalam grup.
 """
 
-__mod_name__ = "Rules"
+__mod_name__ = "📝Rules"
 
 GET_RULES_HANDLER = CommandHandler("rules", get_rules, filters=Filters.group)
 SET_RULES_HANDLER = CommandHandler("setrules", set_rules, filters=Filters.group)
