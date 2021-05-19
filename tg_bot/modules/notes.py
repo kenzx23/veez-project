@@ -71,10 +71,10 @@ def get(bot, update, notename, show_none=True, no_format=False):
                     bot.forward_message(chat_id=chat_id, from_chat_id=chat_id, message_id=note.value)
                 except BadRequest as excp:
                     if excp.message == "pesan untuk diteruskan tidak ditemukan!":
-                        message.reply_text("sepertinya pengirim asli catatan ini telah menghapus
-                                           "pesan mereka - maaf, minta admin bot anda untuk mulai melakukan"
-                                           "penghapusan pesan untuk menghindari hal ini, saya akan menghapus catatan ini dari"
-                                           "catatan yang anda simpan.
+                        message.reply_text("sepertinya pengirim asli catatan ini telah menghapus "
+                                           "pesan mereka - maaf, minta admin bot anda untuk mulai melakukan "
+                                           "penghapusan pesan untuk menghindari hal ini, saya akan menghapus catatan ini dari "
+                                           "catatan yang anda simpan.")
                         sql.rm_note(chat_id, notename)
                     else:
                         raise
