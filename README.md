@@ -7,7 +7,7 @@ temukan saya di telegram sebagai [VINA GROUP BOT](https://t.me/vinagroupbot)
 
 ## cara mudah deploy ke heroku!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/levina-lab/Marie-2.0-English)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/levina-lab/veez-project)
 
 ## Starting the bot.
 
