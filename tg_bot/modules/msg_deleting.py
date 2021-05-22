@@ -30,21 +30,21 @@ def purge(bot: Bot, update: Update, args: List[str]) -> str:
                 try:
                     bot.deleteMessage(chat.id, m_id)
                 except BadRequest as err:
-                    if err.message == "Message can't be deleted":
+                    if err.message == "pesan tidak dapat dihapus":
                         bot.send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
                                                   "not have delete rights, or this might not be a supergroup.")
 
-                    elif err.message != "Message to delete not found":
+                    elif err.message != "pesan untuk dihapus tidak ditemukan":
                         LOGGER.exception("Error while purging chat messages.")
 
             try:
                 msg.delete()
             except BadRequest as err:
-                if err.message == "Message can't be deleted":
+                if err.message == "pesan tidak dapat dihapus":
                     bot.send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
                                               "not have delete rights, or this might not be a supergroup.")
 
-                elif err.message != "Message to delete not found":
+                elif err.message != "pesan untuk dihapus tidak ditemukan":
                     LOGGER.exception("Error while purging chat messages.")
 
             return "<b>{}:</b>" \
@@ -76,19 +76,19 @@ def del_message(bot: Bot, update: Update) -> str:
                    "\nMessage deleted.".format(html.escape(chat.title),
                                                mention_html(user.id, user.first_name))
     else:
-        update.effective_message.reply_text("Whadya want to delete?")
+        update.effective_message.reply_text("Why want to delete?")
 
     return ""
 
 
 __help__ = """
 *Admin only:*
- - /del: deletes the message you replied to
- - /purge: deletes all messages between this and the replied to message.
+ - /del: menghapus pesan yang kamu reply.
+ - /purge: menghapus semua pesan dari anggota yang pesan nya kamu reply.
  - /purge <integer X>: deletes the replied message, and X messages following it.
 """
 
-__mod_name__ = "Purges"
+__mod_name__ = "🚮 Purges"
 
 DELETE_HANDLER = CommandHandler("del", del_message, filters=Filters.group)
 PURGE_HANDLER = CommandHandler("purge", purge, filters=Filters.group, pass_args=True)
