@@ -18,36 +18,31 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-halo {}, nama saya {}, saya adalah bot management group yang dapat mengontrol dan menjaga grup anda agar tetap aman. 
-
-saya dibuat dan dikembangkan oleh [ʟᴇᴠɪɴᴀ](tg://user?id={}).
-informasi lengkap mengenai bot ini dan update lainnya akan diberitahukan di channel resmi kami berikut ini: @levinachannel.
-
-untuk mengetahui bagaimana cara menggunakan saya, silahkan ketik /help.
+halo {}, nama saya {}\nSaya dikelola oleh [candra]{https://t.me/candrakurniawannn}\n┈───────────────────────┈\n➠ Tambahkan saya ke grup mu dan jadikan saya admin !!\n➠ Ketik /help untuk melihat fitur-fitur yang bisa digunakan untuk membantu me-management grup kamu."
 
 """
 
 HELP_STRINGS = """
 
-halo nama saya *{}*.
+hola nama saya *{}*.
 
-*menu utama:* dibawah ini adalah list perintah yang tersedia:
+saya bot management grup telegram yang dapat membantu kamu untuk me-management dan menjaga grup kamu, saya juga memiliki beberapa fitur yang bermanfaat!, bacalah panduan dibawah untuk mengetahui apa saja yang bisa saya bantu.
 
-⫸ /start   : mulai ulang bot sama hal nya seperti restart.
-⫸ /help    : menampilkan menu yang berisi daftar perintah.
-⫸ /donate  : memberikan donasi kepada kreator bot.
-⫸ /settings: di menu ini ada 2 opsi yaitu 👇
+➠ /start : memulai bot ini.
+➠ /help : menampilkan menu perintah.
+➠ /donate : menampilkan menu donasi.
+➠ /settings: ada 2 opsi, yaitu:
  
-  - di private message: untuk mengetahui apa saja yang sudah anda atur.
-  - di dalam grup     : untuk mengatur dan menetapkan pengaturan yang anda pilih.
+  ➥ di pm: saya akan mengirimkan anda pengaturan untuk semua modul yang di dukung.
+  ➥ di dalam grup: saya akan mengarahkan anda ke pm untuk mengatur pengaturan untuk grup tersebut.
 
 {}
-dan berikut ini:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nsemua perintah yang diawali dengan simbol ( / ) atau ( ! ) dapat digunakan.\n")
+dan berikut ini daftar perintah yang dapat anda gunakan di dalam grup:
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nsemua perintah yang diawali dengan simbol / atau ! dapat digunakan.\n")
 
 DONATE_STRING = """halo, selamat datang di menu donasi.
 
-kamu dapat memberikan donasi kepada kreator bot ini, berapapun yang kamu berikan kepada nya akan sangat berharga, kamu dapat memberikan donasi melalui dana ataupun pulsa ke nomor ini: +6281293544619."""
+kamu dapat memberikan donasi kepada kreator bot ini, berapapun yang kamu berikan kepada nya akan sangat berharga, kamu dapat memberikan donasi melalui dana ataupun pulsa ke nomor ini: 081373023752."""
 
 IMPORTED = {}
 MIGRATEABLE = []
