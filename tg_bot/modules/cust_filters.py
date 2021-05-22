@@ -20,7 +20,7 @@ from tg_bot.modules.sql import cust_filters_sql as sql
 from tg_bot.modules.connection import connected
 
 HANDLER_GROUP = 10
-BASIC_FILTER_STRING = "*Filters in this chat:*\n"
+BASIC_FILTER_STRING = "*filter di obrolan ini:*\n"
 
 
 @run_async
@@ -32,7 +32,7 @@ def list_handlers(bot: Bot, update: Update):
     if not conn == False:
         chat_id = conn
         chat_name = dispatcher.bot.getChat(conn).title
-        filter_list = "*Filters in {}:*\n"
+        filter_list = "*filter di {}:*\n"
     else:
         chat_id = update.effective_chat.id
         if chat.type == "private":
@@ -40,13 +40,13 @@ def list_handlers(bot: Bot, update: Update):
             filter_list = "*local filters:*\n"
         else:
             chat_name = chat.title
-            filter_list = "*Filters in {}*:\n"
+            filter_list = "*filter di {}*:\n"
 
 
     all_handlers = sql.get_chat_triggers(chat_id)
 
     if not all_handlers:
-        update.effective_message.reply_text("No filters in {}!".format(chat_name))
+        update.effective_message.reply_text("tidak ada filter di {}!".format(chat_name))
         return
 
     for keyword in all_handlers:
@@ -103,7 +103,7 @@ def filters(bot: Bot, update: Update):
         content, buttons = button_markdown_parser(extracted[1], entities=msg.parse_entities(), offset=offset)
         content = content.strip()
         if not content:
-            msg.reply_text("There is no note message - You can't JUST have buttons, you need a message to go with it!")
+            msg.reply_text("tidak note tersimpan disini - tidak bisa jika hanya tombol, harus disertakan dengan pesan juga!")
             return
 
     elif msg.reply_to_message and msg.reply_to_message.sticker:
@@ -173,7 +173,7 @@ def stop_filter(bot: Bot, update: Update):
     chat_filters = sql.get_chat_triggers(chat_id)
 
     if not chat_filters:
-        update.effective_message.reply_text("No filters are active here!")
+        update.effective_message.reply_text("tidak ada filter yang aktif disini")
         return
 
     for keyword in chat_filters:
@@ -182,7 +182,7 @@ def stop_filter(bot: Bot, update: Update):
             update.effective_message.reply_text("Yep, I'll stop replying to that in *{}*.".format(chat_name), parse_mode=telegram.ParseMode.MARKDOWN)
             raise DispatcherHandlerStop
 
-    update.effective_message.reply_text("That's not a current filter - run /filters for all active filters.")
+    update.effective_message.reply_text("tidak ada filter saat ini - ketik /filters untuk melihat semua daftar filter.")
 
 
 @run_async
@@ -279,7 +279,7 @@ doin?
  - /stop <filter keyword>: stop that filter.
 """
 
-__mod_name__ = "Filters"
+__mod_name__ = "🔤 Filters"
 
 FILTER_HANDLER = CommandHandler("filter", filters)
 STOP_HANDLER = CommandHandler("stop", stop_filter)
