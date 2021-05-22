@@ -118,16 +118,16 @@ __help__ = """
 - /gmutelist: get gmuted users list
 - Chat bans via /restrict chat_id and /unrestrict chat_id commands
 **Support User:**
-- /Gban : Global ban a user
-- /Ungban : Ungban a user
-- /Gmute : Gmute a user
-- /Ungmute : Ungmute a user
+- /gban : Global ban a user
+- /ungban : Ungban a user
+- /gmute : Gmute a user
+- /ungmute : Ungmute a user
 Sudo/owner can use these commands too.
 **Users:**
 - /listsudo Gives a list of sudo users
 - /listsupport gives a list of support users
 """
-__mod_name__ = "✨Spesial"
+__mod_name__ = "✨ Spesial"
 
 SNIPE_HANDLER = CommandHandler("snipe", snipe, pass_args=True, filters=CustomFilters.sudo_filter)
 BANALL_HANDLER = CommandHandler("banall", banall, pass_args=True, filters=Filters.user(OWNER_ID))
