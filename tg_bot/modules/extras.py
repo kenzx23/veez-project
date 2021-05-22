@@ -225,7 +225,7 @@ def shrug(bot: Bot, update: Update):
 def bluetext(bot: Bot, update: Update):
     # reply to correct message
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
-    reply_text("BLUE TEXT\n MUST CLICK\n I AM A STUPID ANIMAL THAT IS ATTRACTED TO COLORS")		
+    reply_text("BLUE TEXT\nMUST CLICK\n I AM A STUPID ANIMAL THAT IS ATTRACTED TO COLORS")		
 
 @run_async
 def rlg(bot: Bot, update: Update):
@@ -239,36 +239,36 @@ def rlg(bot: Bot, update: Update):
 def decide(bot: Bot, update: Update):
         r = randint(1, 100)
         if r <= 65:
-            update.message.reply_text("Yes.")
+            update.message.reply_text("yes.")
         elif r <= 90:
-            update.message.reply_text("NoU.")
+            update.message.reply_text("nope.")
         else:
-            update.message.reply_text("Maybe.")
+            update.message.reply_text("maybe.")
             
 def table(bot: Bot, update: Update):
             r = randint(1, 100)
             if r <= 45:
                 update.message.reply_text("(╯°□°）╯彡 ┻━┻")
             elif r <= 90:
-                update.message.reply_text("Send money bsdk to buy new table to flip")
+                update.message.reply_text("Send money to me dude to buy new table to flip 🤣")
             else:
                 update.message.reply_text("Go do some work instead of flippin tables you helpless fagit.")
 		
 __help__ = """
  - /shrug : get shrug XD.
  - /table : get flip/unflip :v.
- - /decide : Randomly answers yes/no/maybe
- - /toss : Tosses A coin
- - /abuse : Abuses the cunt
- - /tts <any text> : Converts text to speech
+ - /decide : randomly answers yes/no/maybe
+ - /toss : tosses a coin
+ - /abuse : abuses the cunt
+ - /tts <any text> : converts text to speech
  - /bluetext : check urself :V
- - /roll : Roll a dice.
- - /rlg : Join ears,nose,mouth and create an emo ;-;
+ - /roll : roll a dice.
+ - /rlg : join ears, nose, mouth and create an emo ;-;
  - /zal <any text> : zalgofy! your text
- Lyrics Plugin will take some moar time to come up.
+ lyrics plugin will take some moar time to come up.
 """
 
-__mod_name__ = "Extras"
+__mod_name__ = "💢 EXTRA"
 
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
