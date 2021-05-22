@@ -440,7 +440,7 @@ def runban(bot: Bot, update: Update, args: List[str]):
 
 
 __help__ = """
- - /kickme: kicks the user who issued the command
+ - /kickme: menendang anggota keluar dari grup saat mereka memakai perintah ini.
 
 *Admin only:*
  - /ban <userhandle>: bans a user. (via handle, or reply)
@@ -449,7 +449,7 @@ __help__ = """
  - /kick <userhandle>: kicks a user, (via handle, or reply)
 """
 
-__mod_name__ = "Bans"
+__mod_name__ = "🚷 Bans"
 
 BAN_HANDLER = CommandHandler("ban", ban, pass_args=True, filters=Filters.group)
 TEMPBAN_HANDLER = CommandHandler(["tban", "tempban"], temp_ban, pass_args=True, filters=Filters.group)
