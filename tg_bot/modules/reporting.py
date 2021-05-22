@@ -120,7 +120,7 @@ def __user_settings__(user_id):
         sql.user_should_report(user_id))
 
 
-__mod_name__ = "🚨Reporting"
+__mod_name__ = "🚨 Reporting"
 
 __help__ = """
  - /report <alasan>: balas ke pesan si pelanggar untuk melaporkan ke admin.
