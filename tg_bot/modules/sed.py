@@ -100,13 +100,13 @@ def sed(bot: Bot, update: Update):
 
 
 __help__ = """
- - s/<text1>/<text2>(/<flag>): Reply to a message with this to perform a sed operation on that message, replacing all \
-occurrences of 'text1' with 'text2'. Flags are optional, and currently include 'i' for ignore case, 'g' for global, \
-or nothing. Delimiters include `/`, `_`, `|`, and `:`. Text grouping is supported. The resulting message cannot be \
-larger than {}.
-*Reminder:* Sed uses some special characters to make matching easier, such as these: `+*.?\\`
-If you want to use these characters, make sure you escape them!
-eg: \\?.
+ - s/<text1>/<text2>(/<flag>): Balas pesan dengan ini untuk melakukan operasi sed pada pesan itu, menggantikan semua \
+kejadian dari 'text1' with 'text2'. Flags adalah opsional, dan saat ini termasuk 'i' untuk kasus abaikan, 'g' untuk global, \
+atau tidak sama sekali. Pembatas termasuk `/`, `_`, `|`, dan `:`. Pengelompokan teks didukung. The resulting message cannot be \
+lebih besar dari {}.
+*Reminder:* Sed menggunakan beberapa karakter khusus untuk mempermudah pencocokan, seperti ini: `+*.?\\`
+Jika Anda ingin menggunakan karakter ini, pastikan Anda menghindarinya!
+misalnya: \\?.
 """.format(telegram.MAX_MESSAGE_LENGTH)
 
 __mod_name__ = "🆎 Sed/Regex"
