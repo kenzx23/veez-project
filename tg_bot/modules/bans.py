@@ -443,10 +443,10 @@ __help__ = """
  - /kickme: menendang anggota keluar dari grup saat mereka memakai perintah ini.
 
 *Admin only:*
- - /ban <userhandle>: bans a user. (via handle, or reply)
- - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unban <userhandle>: unbans a user. (via handle, or reply)
- - /kick <userhandle>: kicks a user, (via handle, or reply)
+ - /ban <userhandle>: melarang seorang pengguna. (via handle, or reply)
+ - /tban <userhandle> x(m/h/d): melarang seorang oengguna berdurasi x. (via handle, or reply). m = minutes, h = hours, d = days.
+ - /unban <userhandle>: membatalkan larangan pengguna. (via handle, or reply)
+ - /kick <userhandle>: menendang seorang pengguna, (via handle, or reply)
 """
 
 __mod_name__ = "🚷 Bans"
