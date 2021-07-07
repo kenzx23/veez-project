@@ -52,7 +52,7 @@ __help__ = """
  - /t: sambil membalas pesan, akan membalas dengan versi tata bahasa yang dikoreksi
 """
 
-__mod_name__ = "Translator"
+__mod_name__ = "📰Translator"
 
 
 TRANSLATE_HANDLER = CommandHandler('t', translate)
