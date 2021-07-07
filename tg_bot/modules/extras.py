@@ -255,17 +255,17 @@ def table(bot: Bot, update: Update):
                 update.message.reply_text("Go do some work instead of flippin tables you helpless fagit.")
 		
 __help__ = """
- - /shrug : get shrug XD.
- - /table : get flip/unflip :v.
- - /decide : randomly answers yes/no/maybe
- - /toss : tosses a coin
- - /abuse : abuses the cunt
- - /tts <any text> : converts text to speech
- - /bluetext : check urself :V
- - /roll : roll a dice.
- - /rlg : join ears, nose, mouth and create an emo ;-;
- - /zal <any text> : zalgofy! your text
- lyrics plugin will take some moar time to come up.
+ - /shrug : angkat bahu XD.
+ - /table : dapatkan flip/unflip :v.
+ - /decide : jawaban acak yes/no/maybe
+ - /toss : melempar koin
+ - /abuse : menyalahgunakan vagina
+ - /tts <any text> : mengubah teks menjadi ucapan
+ - /bluetext : cek sendiri :V
+ - /roll : melempar dadu.
+ - /rlg : bergabung dengan telinga, hidung, mulut dan buat emo ;-;
+ - /zal <any text> : zalgofy! teks Anda
+ plugin lirik akan membutuhkan waktu lama untuk muncul.
 """
 
 __mod_name__ = "💢 EXTRA"
