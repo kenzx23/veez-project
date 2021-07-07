@@ -269,14 +269,14 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- - /filters: list all active filters in this chat.
+ - /filters: daftar semua filter aktif dalam obrolan ini.
 
 *Admin only:*
- - /filter <keyword> <reply message>: add a filter to this chat. The bot will now reply that message whenever 'keyword'\
-is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. NOTE: all filter \
-keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you \
+ - /filter <keyword> <reply message>: tambahkan filter ke obrolan ini. Bot sekarang akan membalas pesan itu kapan pun 'keyword'\
+disebutkan. Jika Anda membalas stiker dengan keyword, bot akan membalas dengan stiker itu. CATATAN: Semua filter \
+keywords berada dalam huruf kecil. Jika Anda ingin keyword Anda menjadi kalimat, gunakan tanda kutip. eg: /filter "hey there" How you \
 doin?
- - /stop <filter keyword>: stop that filter.
+ - /stop <filter keyword>: menghentikan filter.
 """
 
 __mod_name__ = "🔤 Filters"
