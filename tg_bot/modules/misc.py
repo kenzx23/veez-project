@@ -17,101 +17,100 @@ from tg_bot.modules.helper_funcs.extraction import extract_user
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 
 RUN_STRINGS = (
-    "Where do you think you're going?",
-    "Huh? what? did they get away?",
-    "ZZzzZZzz... Huh? what? oh, just them again, nevermind.",
-    "Get back here!",
-    "Not so fast...",
-    "Look out for the wall!",
-    "Don't leave me alone with them!!",
-    "You run, you die.",
-    "Jokes on you, I'm everywhere",
-    "You're gonna regret that...",
-    "You could also try /kickme, I hear that's fun.",
-    "Go bother someone else, no-one here cares.",
-    "You can run, but you can't hide.",
-    "Is that all you've got?",
-    "I'm behind you...",
-    "You've got company!",
-    "We can do this the easy way, or the hard way.",
-    "You just don't get it, do you?",
-    "Yeah, you better run!",
-    "Please, remind me how much I care?",
-    "I'd run faster if I were you.",
-    "That's definitely the droid we're looking for.",
-    "May the odds be ever in your favour.",
-    "Famous last words.",
-    "And they disappeared forever, never to be seen again.",
-    "\"Oh, look at me! I'm so cool, I can run from a bot!\" - this person",
-    "Yeah yeah, just tap /kickme already.",
-    "Here, take this ring and head to Mordor while you're at it.",
-    "Legend has it, they're still running...",
-    "Unlike Harry Potter, your parents can't protect you from me.",
-    "Fear leads to anger. Anger leads to hate. Hate leads to suffering. If you keep running in fear, you might "
-    "be the next Vader.",
-    "Multiple calculations later, I have decided my interest in your shenanigans is exactly 0.",
-    "Legend has it, they're still running.",
-    "Keep it up, not sure we want you here anyway.",
-    "You're a wiza- Oh. Wait. You're not Harry, keep moving.",
-    "NO RUNNING IN THE HALLWAYS!",
-    "Hasta la vista, baby.",
-    "Who let the dogs out?",
-    "It's funny, because no one cares.",
-    "Ah, what a waste. I liked that one.",
-    "Frankly, my dear, I don't give a damn.",
-    "My milkshake brings all the boys to yard... So run faster!",
-    "You can't HANDLE the truth!",
-    "A long time ago, in a galaxy far far away... Someone would've cared about that. Not anymore though.",
-    "Hey, look at them! They're running from the inevitable banhammer... Cute.",
-    "Han shot first. So will I.",
-    "What are you running after, a white rabbit?",
-    "As The Doctor would say... RUN!",
+    "Ke mana Anda pikir Anda akan pergi??",
+    "Hah? apa? apakah mereka lolos?",
+    "ZZzzZZzz... Hah? apa? oh, hanya mereka lagi, tidak apa-apa.",
+    "Kembali kesini!",
+    "Tidak begitu cepat...",
+    "Perhatikan tembok!",
+    "Jangan tinggalkan aku sendiri bersama mereka!!",
+    "Kamu lari, kamu mati.",
+    "Lelucon tentangmu, aku ada di mana-mana",
+    "Kamu akan menyesalinya...",
+    "Anda juga bisa mencoba /kickme, saya dengar itu menyenangkan.",
+    "Pergi ganggu orang lain, tidak ada yang peduli.",
+    "Kamu bisa lari, tapi kamu tidak bisa bersembunyi.",
+    "Apakah itu semua yang Anda punya?",
+    "saya di belakang Anda...",
+    "Anda punya teman!",
+    "Kita bisa melakukan ini dengan cara yang mudah, atau dengan cara yang sulit.",
+    "Anda hanya tidak mengerti, bukan?",
+    "Ya, lebih baik kamu lari!",
+    "Tolong, ingatkan saya betapa saya peduli?",
+    "Aku akan berlari lebih cepat jika aku jadi kamu.",
+    "Itu pasti droid yang kita cari.",
+    "Semoga peluang selalu menguntungkan Anda.",
+    "Kata-kata terakhir yang terkenal.",
+    "Dan mereka menghilang selamanya, tidak pernah terlihat lagi.",
+    "\"Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot!\" - orang ini",
+    "Ya ya, cukup ketuk /kickme sudah.",
+    "Di sini, ambil cincin ini dan pergi ke Mordor saat Anda melakukannya.",
+    "Legenda mengatakan, mereka masih berlari...",
+    "Tidak seperti Harry Potter, orang tuamu tidak bisa melindungimu dariku.",
+    "Ketakutan menyebabkan kemarahan. Kemarahan mengarah pada kebencian. Kebencian menyebabkan penderitaan. Jika kamu terus berlari dalam ketakutan, kamu mungkin "
+    "jadilah Vader berikutnya.",
+    "Beberapa perhitungan kemudian, saya telah memutuskan minat saya pada kejahatan Anda persis 0.",
+    "Legenda mengatakan, mereka masih berlari.",
+    "Pertahankan, tidak yakin kami ingin Anda di sini.",
+    "Anda seorang wiza- Oh. Tunggu. Kamu bukan Harry, teruslah bergerak.",
+    "TIDAK BERLARI DI LOrong!",
+    "Hasta la vista, sayang.",
+    "Siapa yang membiarkan anjing keluar??",
+    "Lucu, karena tidak ada yang peduli.",
+    "Ah, sia-sia. Saya suka yang itu.",
+    "Terus terang, sayangku, aku tidak peduli.",
+    "Milkshake saya membawa semua anak laki-laki ke halaman... So run faster!",
+    "Anda tidak bisa MENANGANI kebenaran!",
+    "Dahulu kala, di galaksi yang sangat jauh... Seseorang akan peduli tentang itu. Sekarang tidak lagi.",
+    "Han menembak lebih dulu. Aku juga.",
+    "Apa yang kamu kejar, kelinci putih?",
+    "Seperti yang akan dikatakan The Doctor... LARI!",
 )
 
 SLAP_TEMPLATES = (
-    "{user1} {hits} {user2} with a {item}.",
-    "{user1} {hits} {user2} in the face with a {item}.",
-    "{user1} {hits} {user2} around a bit with a {item}.",
-    "{user1} {throws} a {item} at {user2}.",
-    "{user1} grabs a {item} and {throws} it at {user2}'s face.",
-    "{user1} launches a {item} in {user2}'s general direction.",
-    "{user1} starts slapping {user2} silly with a {item}.",
-    "{user1} pins {user2} down and repeatedly {hits} them with a {item}.",
-    "{user1} grabs up a {item} and {hits} {user2} with it.",
-    "{user1} ties {user2} to a chair and {throws} a {item} at them.",
-    "{user1} gave a friendly push to help {user2} learn to swim in lava."
+    "{user1} {hits} {user2} dengan {item}.",
+    "{user1} {hits} {user2} di wajah dengan {item}.",
+    "{user1} {hits} {user2} sekitar sedikit dengan {item}.",
+    "{user1} {throws} Sebuah {item} di {user2}.",
+    "{user1} meraih {item} dan {throws} itu di {user2}'wajah.",
+    "{user1} meluncurkan {item} di {user2}'s arahan umum.",
+    "{user1} mulai menampar {user2} konyol dengan {item}.",
+    "{user1} pin {user2} turun dan berulang-ulang {hits} mereka dengan {item}.",
+    "{user1} meraih {item} dan {hits} {user2} dengan itu.",
+    "{user1} dasi {user2} ke kursi dan {throws} Sebuah {item} pada mereka.",
+    "{user1} memberikan dorongan ramah untuk membantu {user2} belajar berenang di lava."
 )
 
 ITEMS = (
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
+    "wajan besi cor",
+    "trout besar",
+    "tongkat pemukul baseball",
+    "tongkat pemukul kriket",
+    "tongkat kayu",
+    "kuku",
+    "pencetak",
+    "sekop",
+    "Kontol",
+    "buku teks fisika",
+    "pemanggang roti",
+    "potret Richard Stallman",
+    "televisi",
+    "truk lima ton",
+    "gulungan lakban",
+    "Buku",
     "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "televisi lama",
+    "sekarung batu",
+    "ikan trout pelangi",
+    "ayam karet",
+    "pemukul berduri",
+    "alat pemadam Api",
+    "batu berat",
+    "bongkahan kotoran",
+    "sarang lebah",
+    "sepotong daging busuk",
+    "kontol",
+    "ton batu bata",
 )
 
 THROW = (
@@ -339,27 +338,27 @@ def gdpr(bot: Bot, update: Update):
 
 
 MARKDOWN_HELP = """
-Markdown is a very powerful formatting tool supported by telegram. {} has some enhancements, to make sure that \
-saved messages are correctly parsed, and to allow you to create buttons.
+Markdown adalah alat pemformatan yang sangat kuat yang didukung oleh telegram. {} has some enhancements, to make sure that \
+pesan yang disimpan diurai dengan benar, dan untuk memungkinkan Anda membuat tombol.
 
-- <code>_italic_</code>: wrapping text with '_' will produce italic text
-- <code>*bold*</code>: wrapping text with '*' will produce bold text
-- <code>`code`</code>: wrapping text with '`' will produce monospaced text, also known as 'code'
-- <code>[sometext](someURL)</code>: this will create a link - the message will just show <code>sometext</code>, \
-and tapping on it will open the page at <code>someURL</code>.
+- <code>_italic_</code>: membungkus teks dengan '_' akan menghasilkan teks miring
+- <code>*bold*</code>: membungkus teks dengan '*' akan menghasilkan teks tebal
+- <code>`code`</code>: membungkus teks dengan '`' akan menghasilkan teks monospace, juga dikenal sebagai 'kode'
+- <code>[sometext](someURL)</code>: ini akan membuat tautan - pesan hanya akan muncul <code>sometext</code>, \
+dan mengetuknya akan membuka halaman di <code>someURL</code>.
 EG: <code>[test](example.com)</code>
 
-- <code>[buttontext](buttonurl:someURL)</code>: this is a special enhancement to allow users to have telegram \
-buttons in their markdown. <code>buttontext</code> will be what is displayed on the button, and <code>someurl</code> \
-will be the url which is opened.
-EG: <code>[This is a button](buttonurl:example.com)</code>
+- <code>[buttontext](buttonurl:someURL)</code>: ini adalah peningkatan khusus untuk memungkinkan pengguna memiliki telegram \
+tombol di markdown mereka. <code>buttontext</code> akan menjadi apa yang ditampilkan pada tombol, dan <code>someurl</code> \
+akan menjadi url yang dibuka.
+EG: <code>[Ini adalah tombol](buttonurl:example.com)</code>
 
-If you want multiple buttons on the same line, use :same, as such:
+Jika Anda ingin beberapa tombol pada baris yang sama, gunakan :sama, seperti itu:
 <code>[one](buttonurl://example.com)
 [two](buttonurl://google.com:same)</code>
-This will create two buttons on a single line, instead of one button per line.
+Ini akan membuat dua tombol pada satu baris, bukan satu tombol per baris.
 
-Keep in mind that your message <b>MUST</b> contain some text other than just a button!
+berada dalam huruf kecil. Jika Anda ingin kata kunci Anda menjadi kalimat, gunakan tanda kutip. dalam pikiran bahwa pesan Anda <b>MUST</b> berisi beberapa teks selain hanya sebuah tombol!
 """.format(dispatcher.bot.first_name)
 
 
