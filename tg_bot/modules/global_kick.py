@@ -13,19 +13,19 @@ from tg_bot.modules.helper_funcs.misc import send_to_list
 from tg_bot.modules.sql.users_sql import get_all_chats
 
 GKICK_ERRORS = {
-    "User is an administrator of the chat",
-    "Chat not found",
-    "Not enough rights to restrict/unrestrict chat member",
+    "Pengguna adalah administrator chat",
+    "Obrolan tidak ditemukan",
+    "Tidak cukup hak untuk membatasi/membatalkan pembatasan anggota obrolan",
     "User_not_participant",
-    "Peer_id_invalid",
-    "Group chat was deactivated",
-    "Need to be inviter of a user to kick it from a basic group",
-    "Chat_admin_required",
-    "Only the creator of a basic group can kick group administrators",
-    "Channel_private",
-    "Not in the chat",
-    "Method is available for supergroup and channel chats only",
-    "Reply message not found"
+    "Partner_id_invalid",
+    "Obrolan grup dinonaktifkan",
+    "Perlu mengundang pengguna untuk menendangnya dari grup dasar",
+    "Chat_admin_wajib",
+    "Hanya pembuat grup dasar yang dapat menendang administrator grup",
+    "private_channel",
+    "Tidak di chat",
+    "Metode hanya tersedia untuk obrolan supergrup dan saluran",
+    "Pesan balasan tidak ditemukan"
 }
 
 @run_async
