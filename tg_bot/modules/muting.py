@@ -184,7 +184,7 @@ __help__ = """
  - /unmute <userhandle>: membunyikan pengguna. Dapat juga digunakan sebagai balasan, menonaktifkan balasan ke pengguna.
 """
 
-__mod_name__ = "Mute"
+__mod_name__ = "🔇Mute"
 
 MUTE_HANDLER = CommandHandler("mute", mute, pass_args=True, filters=Filters.group)
 UNMUTE_HANDLER = CommandHandler("unmute", unmute, pass_args=True, filters=Filters.group)
