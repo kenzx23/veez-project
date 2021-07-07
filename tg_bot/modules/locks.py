@@ -289,18 +289,18 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- - /locktypes: a list of possible locktypes
+ - /locktypes: daftar kemungkinan tipe kunci
 
 *Admin only:*
- - /lock <type>: lock items of a certain type (not available in private)
- - /unlock <type>: unlock items of a certain type (not available in private)
- - /locks: the current list of locks in this chat.
+ - /lock <type>: mengunci item dari jenis tertentu (tidak tersedia secara pribadi)
+ - /unlock <type>: membuka kunci item dari jenis tertentu (tidak tersedia secara pribadi)
+ - /locks: daftar kunci saat ini dalam obrolan ini.
 
-Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls which haven't been whitelisted, locking stickers will delete all \
-stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
+Kunci dapat digunakan untuk membatasi pengguna grup.
+misalnya:
+Mengunci url akan otomatis menghapus semua pesan dengan url yang belum masuk daftar putih, mengunci stiker akan menghapus semua \
+stiker, dll.
+Mengunci bot akan menghentikan non-admin menambahkan bot ke obrolan.
 """
 
 __mod_name__ = "🔒 Locks"
