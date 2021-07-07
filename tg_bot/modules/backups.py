@@ -70,9 +70,9 @@ __mod_name__ = "🗂 Backups"
 
 __help__ = """
 *Admin Only:*
- - /import: reply to a group butler backup file to import as much as possible, making the transfer super simple! Note \
-that files/photos can't be imported due to telegram restrictions.
- - /export: !!! This isn't a command yet, but should be coming soon!
+ - /import: balas file cadangan kepala pelayan grup untuk diimpor sebanyak mungkin, membuat transfer menjadi sangat sederhana! Catatan \
+bahwa file/foto tidak dapat diimpor karena pembatasan telegram.
+ - /export: !!! Ini belum menjadi perintah, tetapi akan segera hadir!
 """
 IMPORT_HANDLER = CommandHandler("import", import_data)
 EXPORT_HANDLER = CommandHandler("export", export_data)
