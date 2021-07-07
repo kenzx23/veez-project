@@ -216,12 +216,12 @@ def rss_set(bot, job):
 
 
 __help__ = """
- - /addrss <link>: add an RSS link to the subscriptions.
- - /removerss <link>: removes the RSS link from the subscriptions.
- - /rss <link>: shows the link's data and the last entry, for testing purposes.
- - /listrss: shows the list of rss feeds that the chat is currently subscribed to.
+ - /addrss <link>: tambahkan tautan RSS ke langganan.
+ - /removerss <link>: menghapus tautan RSS dari langganan.
+ - /rss <link>: menunjukkan data tautan dan entri terakhir, untuk tujuan pengujian.
+ - /listrss: menunjukkan daftar rss feed yang saat ini menjadi langganan obrolan.
 
-NOTE: In groups, only admins can add/remove RSS links to the group's subscription
+CATATAN: Dalam grup, hanya admin yang dapat menambahkan/menghapus tautan RSS ke langganan grup
 """
 
 __mod_name__ = "RSS Feed"
