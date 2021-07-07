@@ -102,30 +102,30 @@ def leavechat(bot: Bot, update: Update, args: List[int]):
         update.effective_message.reply_text("anda sepertinya tidak mengacu pada obrolan.")
 
 __help__ = """
-**Owner only:**
-- /getlink **chatid**: Get the invite link for a specific chat.
-- /banall: Ban all members from a chat
-- /leavechat **chatid** : leave a chat
-**Sudo/owner only:**
-- /quickscope **userid** **chatid**: Ban user from chat.
-- /quickunban **userid** **chatid**: Unban user from chat.
-- /snipe **chatid** **string**: Make me send a message to a specific chat.
-- /rban **userid** **chatid** remotely ban a user from a chat
-- /runban **userid** **chatid** remotely unban a user from a chat
-- /Stats: check bot's stats
-- /chatlist: get chatlist
-- /gbanlist: get gbanned users list
-- /gmutelist: get gmuted users list
-- Chat bans via /restrict chat_id and /unrestrict chat_id commands
+**Hanya pemilik:**
+- /getlink **chatid**: Dapatkan tautan undangan untuk obrolan tertentu.
+- /banall: Larang semua anggota dari obrolan
+- /leavechat **chatid** : tinggalkan obrolan
+**Sudo/pemilik saja:**
+- /quickscope **userid** **chatid**: Larang pengguna dari obrolan.
+- /quickunban **userid** **chatid**: Batalkan pemblokiran pengguna dari obrolan.
+- /snipe **chatid** **string**: Buat saya mengirim pesan ke obrolan tertentu.
+- /rban **userid** **chatid** melarang pengguna dari jarak jauh dari obrolan
+- /runban **userid** **chatid** cabut blokir pengguna dari obrolan dari jarak jauh
+- /Stats: periksa statistik bot
+- /chatlist: dapatkan daftar obrolan
+- /gbanlist: dapatkan daftar pengguna yang diblokir
+- /gmutelist: dapatkan daftar pengguna yang di-gmuted
+- Larangan obrolan melalui /restrict chat_id and /unrestrict chat_id commands
 **Support User:**
-- /gban : Global ban a user
-- /ungban : Ungban a user
-- /gmute : Gmute a user
-- /ungmute : Ungmute a user
-Sudo/owner can use these commands too.
-**Users:**
-- /listsudo Gives a list of sudo users
-- /listsupport gives a list of support users
+- /gban : Larangan global pengguna
+- /ungban : Ungban pengguna
+- /gmute : Menonaktifkan pengguna
+- /ungmute : Suarakan pengguna
+Sudo/pemilik dapat menggunakan perintah ini juga.
+**Pengguna:**
+- /listsudo Memberikan daftar pengguna sudo
+- /listsupport memberikan daftar pengguna dukungan
 """
 __mod_name__ = "✨ Spesial"
 
