@@ -40,7 +40,7 @@ def mute(bot: Bot, update: Update, args: List[str]) -> str:
 
         elif member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chat.id, user_id, can_send_messages=False)
-            message.reply_text("👍🏻 muted! 🤐")
+            message.reply_text("👍🏻 meredam! 🤐")
             return "<b>{}:</b>" \
                    "\n#MUTE" \
                    "\n<b>Admin:</b> {}" \
@@ -158,15 +158,15 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         if member.can_send_messages is None or member.can_send_messages:
             bot.restrict_chat_member(chat.id, user_id, until_date=mutetime, can_send_messages=False)
-            message.reply_text("shut up! 😠 Muted for {}!".format(time_val))
+            message.reply_text("diam! Dibisukan untuk {}!".format(time_val))
             return log
         else:
-            message.reply_text("This user is already muted.")
+            message.reply_text("Pengguna ini sudah dibisukan.")
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text("shut up! 😠 Muted for {}!".format(time_val), quote=False)
+            message.reply_text("diam! Dibisukan untuk {}!".format(time_val), quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -179,9 +179,9 @@ def temp_mute(bot: Bot, update: Update, args: List[str]) -> str:
 
 __help__ = """
 *Admin only:*
- - /mute <userhandle>: silences a user. Can also be used as a reply, muting the replied to user.
- - /tmute <userhandle> x(m/h/d): mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unmute <userhandle>: unmutes a user. Can also be used as a reply, muting the replied to user.
+ - /mute <userhandle>: membungkam pengguna. Bisa juga digunakan sebagai balasan, mematikan pengguna yang dibalas.
+ - /tmute <userhandle> x(m/h/d): membisukan pengguna selama x waktu. (via handle, or reply). m = minutes, h = hours, d = days.
+ - /unmute <userhandle>: membunyikan pengguna. Dapat juga digunakan sebagai balasan, menonaktifkan balasan ke pengguna.
 """
 
 __mod_name__ = "Mute"
