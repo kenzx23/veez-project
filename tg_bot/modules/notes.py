@@ -292,11 +292,11 @@ Jika Anda ingin mengambil konten catatan tanpa pemformatan apa pun, gunakan `/ g
 berguna saat memperbarui catatan saat ini.
 
 *Admin only:*
- - /save <notename> <notedata>: saves notedata as a note with name notename
-A button can be added to a note by using standard markdown link syntax - the link should just be prepended with a \
-`buttonurl:` section, as such: `[somelink](buttonurl:example.com)`. Check /markdownhelp for more info.
- - /save <notename>: save the replied message as a note with name notename
- - /clear <notename>: clear note with this name
+ - /save <notename> <notedata>: menyimpan notedata sebagai catatan dengan nama notename
+Tombol dapat ditambahkan ke catatan dengan menggunakan sintaks tautan penurunan harga standar - tautannya harus diawali dengan \
+`buttonurl:` bagian, seperti: `[somelink](buttonurl:example.com)`. Memeriksa /markdownhelp untuk info lebih lanjut.
+ - /save <notename>: simpan pesan balasan sebagai catatan dengan nama notename
+ - /clear <notename>: hapus catatan dengan nama ini
 """
 
 __mod_name__ = "notes"
