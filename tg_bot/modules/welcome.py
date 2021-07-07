@@ -445,29 +445,28 @@ def clean_welcome(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
 
-WELC_HELP_TXT = "Your group's welcome/goodbye messages can be personalised in multiple ways. If you want the messages" \
-                " to be individually generated, like the default welcome message is, you can use *these* variables:\n" \
-                " - `{{first}}`: this represents the user's *first* name\n" \
-                " - `{{last}}`: this represents the user's *last* name. Defaults to *first name* if user has no " \
-                "last name.\n" \
-                " - `{{fullname}}`: this represents the user's *full* name. Defaults to *first name* if user has no " \
-                "last name.\n" \
-                " - `{{username}}`: this represents the user's *username*. Defaults to a *mention* of the user's " \
-                "first name if has no username.\n" \
-                " - `{{mention}}`: this simply *mentions* a user - tagging them with their first name.\n" \
-                " - `{{id}}`: this represents the user's *id*\n" \
-                " - `{{count}}`: this represents the user's *member number*.\n" \
-                " - `{{chatname}}`: this represents the *current chat name*.\n" \
-                "\nEach variable MUST be surrounded by `{{}}` to be replaced.\n" \
-                "Welcome messages also support markdown, so you can make any elements bold/italic/code/links. " \
-                "Buttons are also supported, so you can make your welcomes look awesome with some nice intro " \
-                "buttons.\n" \
-                "To create a button linking to your rules, use this: `[Rules](buttonurl://t.me/{}?start=group_id)`. " \
-                "Simply replace `group_id` with your group's id, which can be obtained via /id, and you're good to " \
-                "go. Note that group ids are usually preceded by a `-` sign; this is required, so please don't " \
-                "remove it.\n" \
-                "If you're feeling fun, you can even set images/gifs/videos/voice messages as the welcome message by " \
-                "replying to the desired media, and calling /setwelcome.".format(dispatcher.bot.username)
+WELC_HELP_TXT = "Pesan selamat datang/selamat tinggal grup Anda dapat dipersonalisasi dalam berbagai cara. Jika Anda ingin pesan" \
+                " untuk dihasilkan secara individual, seperti pesan selamat datang default adalah, kamu bisa memakai *these* variabel:\n" \
+                " - `{{first}}`: ini mewakili pengguna *pertama* nama\n" \
+                " - `{{last}}`: ini mewakili *nama belakang* pengguna. Default ke *nama depan* jika pengguna tidak memiliki " \
+                "nama belakang.\n" \
+                " - `{{fullname}}`: ini mewakili nama *lengkap* pengguna. Default ke *nama depan* jika pengguna tidak memiliki " \
+                "nama keluarga.\n" \
+                " - `{{username}}`: ini mewakili *nama pengguna* pengguna. Default untuk *sebutan* dari pengguna " \
+                "nama depan jika tidak memiliki nama pengguna.\n" \
+                " - `{{mention}}`: ini hanya *menyebut* seorang pengguna - menandai mereka dengan nama depan mereka.\n" \
+                " - `{{id}}`: ini mewakili *id* pengguna\n" \
+                " - `{{count}}`: ini mewakili *nomor anggota* pengguna.\n" \
+                 " - `{{chatname}}`: ini mewakili *nama obrolan saat ini*.\n" \
+                "\nSetiap variabel HARUS dikelilingi oleh `{{}}` untuk diganti.\n" \
+                "Pesan sambutan juga mendukung penurunan harga, sehingga Anda dapat membuat elemen apa pun menjadi tebal/miring/kode/tautan. " \
+                "Tombol juga didukung, sehingga Anda dapat membuat sambutan Anda terlihat luar biasa dengan beberapa intro yang bagus.\n" \
+                "Untuk membuat tombol yang menautkan ke rules Anda, gunakan ini: `[Rules](buttonurl://t.me/{}?start=group_id)`. " \
+                "mengganti sederhana `group_id` dengan id grup Anda, yang dapat diperoleh melalui /id, dan Anda baik-baik saja " \
+                "Pergilah. Perhatikan bahwa id grup biasanya didahului oleh sebuah tanda `-` ; ini wajib, jadi tolong jangan " \
+                "dihapus.\n" \
+                "Jika Anda merasa senang, Anda bahkan dapat mengatur gambar/gif/video/pesan suara sebagai pesan selamat datang dengan " \
+                "membalas media yang diinginkan, dan memanggil /setwelcome.".format(dispatcher.bot.username)
 
 
 @run_async
@@ -503,17 +502,17 @@ __help__ = """
 {}
 
 *Admin only:*
- - /welcome <on/off>: enable/disable welcome messages.
- - /welcome: shows current welcome settings.
- - /welcome noformat: shows current welcome settings, without the formatting - useful to recycle your welcome messages!
- - /goodbye -> same usage and args as /welcome.
- - /setwelcome <sometext>: set a custom welcome message. If used replying to media, uses that media.
- - /setgoodbye <sometext>: set a custom goodbye message. If used replying to media, uses that media.
- - /resetwelcome: reset to the default welcome message.
- - /resetgoodbye: reset to the default goodbye message.
- - /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.
- - /clearjoin <on/off>: when someone joins, try to delete the *user* joined the group message.
- - /welcomehelp: view more formatting information for custom welcome/goodbye messages.
+ - /welcome <on/off>: aktifkan/nonaktifkan pesan selamat datang.
+ - /welcome: menunjukkan pengaturan sambutan saat ini.
+ - /welcome noformat: menunjukkan pengaturan sambutan saat ini, tanpa pemformatan - berguna untuk mendaur ulang pesan selamat datang Anda!
+ - /goodbye -> penggunaan dan argumen yang sama sebagai /welcome.
+ - /setwelcome <sometext>: atur pesan selamat datang khusus. Jika digunakan membalas media, gunakan media itu.
+ - /setgoodbye <sometext>: atur pesan selamat tinggal khusus. Jika digunakan membalas media, gunakan media itu.
+ - /resetwelcome: reset ke pesan selamat datang default.
+ - /resetgoodbye: reset ke pesan selamat tinggal default.
+ - /cleanwelcome <on/off>: Pada anggota baru, coba hapus pesan selamat datang sebelumnya untuk menghindari spam obrolan.
+ - /clearjoin <on/off>: ketika seseorang bergabung, coba hapus *user* bergabung dengan pesan grup.
+ - /welcomehelp: lihat lebih banyak informasi pemformatan untuk pesan welcome/goodbye khusus.
 
 """.format(WELC_HELP_TXT)
 
