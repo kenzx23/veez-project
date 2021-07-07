@@ -145,14 +145,14 @@ def connected(bot, update, chat, user_id, need_admin=True):
 
 
 __help__ = """
-Actions are available with connected groups:
- • View and edit notes
- • View and edit filters
- • More in future!
+Tindakan tersedia dengan grup yang terhubung:
+ • Lihat dan edit catatan
+ • Lihat dan edit filter
+ • Lebih banyak lagi di masa depan!
 
- - /connect <chatid>: Connect to remote chat
- - /disconnect: Disconnect from chat
- - /allowconnect on/yes/off/no: Allow connect users to group
+ - /connect <chatid>: Hubungkan ke obrolan jarak jauh
+ - /disconnect: Putuskan ke obrolan jarak jauh
+ - /allowconnect on/yes/off/no: Mengizinkan pengguna terhubung ke grup
 """
 
 __mod_name__ = "Connections"
