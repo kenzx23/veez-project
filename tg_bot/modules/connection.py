@@ -155,7 +155,7 @@ Tindakan tersedia dengan grup yang terhubung:
  - /allowconnect on/yes/off/no: Mengizinkan pengguna terhubung ke grup
 """
 
-__mod_name__ = "Connections"
+__mod_name__ = "👥Connections"
 
 CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, allow_edited=True, pass_args=True)
 DISCONNECT_CHAT_HANDLER = CommandHandler("disconnect", disconnect_chat, allow_edited=True)
