@@ -147,19 +147,19 @@ def __stats__():
 __mod_name__ = "Word Blacklists"
 
 __help__ = """
-Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, \
-the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!
+Daftar hitam digunakan untuk menghentikan pemicu tertentu agar tidak diucapkan dalam grup. Setiap kali pemicu disebutkan, \
+pesan akan segera dihapus. Kombo yang bagus terkadang memasangkan ini dengan filter peringatan!
 
-*NOTE:* blacklists do not affect group admins.
+*NOTE:* daftar hitam tidak memengaruhi admin grup.
 
- - /blacklist: View the current blacklisted words.
+ - /blacklist: Lihat kata-kata yang masuk daftar hitam saat ini.
 
 *Admin only:*
- - /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different \
-lines will allow you to add multiple triggers.
- - /unblacklist <triggers>: Remove triggers from the blacklist. Same newline logic applies here, so you can remove \
-multiple triggers at once.
- - /rmblacklist <triggers>: Same as above.
+ - /addblacklist <triggers>: Tambahkan pemicu ke daftar hitam. Setiap baris dianggap sebagai satu pemicu, jadi gunakan yang berbeda \
+baris akan memungkinkan Anda untuk menambahkan beberapa pemicu.
+ - /unblacklist <triggers>: Hapus pemicu dari daftar hitam. Logika baris baru yang sama berlaku di sini, sehingga Anda dapat menghapus \
+beberapa pemicu sekaligus.
+ - /rmblacklist <triggers>: sama seperti diatas.
 """
 
 BLACKLIST_HANDLER = DisableAbleCommandHandler("blacklist", blacklist, filters=Filters.group, pass_args=True,
