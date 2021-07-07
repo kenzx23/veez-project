@@ -224,7 +224,7 @@ __help__ = """
 CATATAN: Dalam grup, hanya admin yang dapat menambahkan/menghapus tautan RSS ke langganan grup
 """
 
-__mod_name__ = "RSS Feed"
+__mod_name__ = "⭐RSS Feed"
 
 job = updater.job_queue
 
