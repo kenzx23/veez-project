@@ -18,7 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-halo {}, nama saya {}\nSaya dikelola oleh [candra](https://t.me/candrakurniawannn)\n┈───────────────────────┈\n➠ Tambahkan saya ke grup mu dan jadikan saya admin !!\n➠ Ketik /help untuk melihat fitur-fitur yang bisa digunakan untuk membantu me-management grup kamu."
+halo {}, nama saya {}\nSaya dikelola oleh [ken](https://t.me/xkeeen)\n┈───────────────────────┈\n➠ Tambahkan saya ke grup mu dan jadikan saya admin !!\n➠ Ketik /help untuk melihat fitur-fitur yang bisa digunakan untuk membantu me-management grup kamu."
 
 """
 
